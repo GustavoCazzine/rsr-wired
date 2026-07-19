@@ -5,6 +5,7 @@ import './layout.css';
 export function Footer() {
   const { status, user } = useHabboUser(site.habboNick);
   const isOnline = status === 'ready' && user?.online;
+  const activeContacts = site.contacts.filter((contact) => contact.enabled);
 
   return (
     <footer className="footer">
@@ -21,13 +22,15 @@ export function Footer() {
           <p className="footer-text">{site.tagline}</p>
         </div>
 
-        <div className="footer-contacts">
-          {site.contacts.map((contact) => (
-            <a key={contact.label} href={contact.url} className="footer-contact">
-              {contact.label}: {contact.value}
-            </a>
-          ))}
-        </div>
+        {activeContacts.length > 0 && (
+          <div className="footer-contacts">
+            {activeContacts.map((contact) => (
+              <a key={contact.label} href={contact.url} className="footer-contact">
+                {contact.label}: {contact.value}
+              </a>
+            ))}
+          </div>
+        )}
       </div>
 
       <p className="footer-note">

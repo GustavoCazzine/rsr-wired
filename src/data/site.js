@@ -24,8 +24,10 @@ export const site = {
     role: 'Parceira de criação',
   },
 
+  // "enabled: false" esconde o contato do site sem perder o valor — troque
+  // pra "true" (e preencha value/url) quando quiser exibir de novo.
   contacts: [
-    { label: 'Discord', value: 'seu-usuario', url: '#' }, // TODO
-    { label: 'WhatsApp', value: '(00) 00000-0000', url: '#' }, // TODO
+    { label: 'Discord', value: 'seu-usuario', url: '#', enabled: false },
+    { label: 'WhatsApp', value: '(00) 00000-0000', url: '#', enabled: false },
   ],
 };

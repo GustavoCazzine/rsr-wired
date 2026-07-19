@@ -14,7 +14,7 @@ const links = [
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
-  const { player, status, isGroupMember } = useVisitor();
+  const { player, status } = useVisitor();
 
   return (
     <header className="navbar">
@@ -39,11 +39,6 @@ export function Navbar() {
                 alt={`Avatar de ${player.name}`}
               />
               <span className="navbar-account-name">{player.name}</span>
-              {isGroupMember && (
-                <span className="navbar-account-badge" title={`Membro da ${site.habboGroup.name}`}>
-                  🐀
-                </span>
-              )}
             </NavLink>
           ) : (
             <NavLink to="/" className="navbar-account navbar-account-connect" onClick={() => setOpen(false)}>

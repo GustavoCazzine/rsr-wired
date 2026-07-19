@@ -29,7 +29,7 @@ export function ServiceDetail() {
   }
 
   const categoryLabel = categories.find((cat) => cat.id === service.category)?.label ?? service.category;
-  const primaryContact = site.contacts[0];
+  const primaryContact = site.contacts.find((contact) => contact.enabled);
 
   return (
     <div className="page">
@@ -76,9 +76,15 @@ export function ServiceDetail() {
 
           <aside className="service-detail-side card">
             <span className="service-detail-price">{service.price}</span>
-            <a href={primaryContact?.url} className="btn btn-primary">
-              Pedir esse sistema
-            </a>
+            {primaryContact ? (
+              <a href={primaryContact.url} className="btn btn-primary">
+                Pedir esse sistema
+              </a>
+            ) : (
+              <a href={site.habboRoomUrl} target="_blank" rel="noreferrer" className="btn btn-primary">
+                Pedir esse sistema
+              </a>
+            )}
             <Link to="/portfolio" className="btn btn-secondary">
               Ver trabalhos entregues
             </Link>
