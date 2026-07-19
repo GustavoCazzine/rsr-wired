@@ -1,0 +1,64 @@
+:root {
+  /* Warm, earthy palette pulled straight from the rat costume avatar —
+     no neon, this is the actual identity. */
+  --color-bg: #0f0c09;
+  --color-surface: #1c1712;
+  --color-surface-alt: #241d17;
+  --color-text: #f3ece2;
+  --color-text-muted: #a99680;
+  --color-border: #362c22;
+
+  /* Warm leather/khaki brown (from the pants/tail) — the structural color
+     for most borders & shadows */
+  --color-border-strong: #705a3a;
+  --color-silver: #d8c3a5;
+
+  /* Amber/bronze (from the belt buckle) — the signature accent, reserved
+     for primary actions & highlights */
+  --color-brand: #dd9a4c;
+  --color-brand-dark: #b87730;
+  --color-ink: #1a1109;
+  --color-accent: #d98a90;
+
+  --color-success: #8fbf6b;
+  --color-danger: #e2665a;
+
+  /* Square, pixel-art corners everywhere */
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+
+  --border-width: 3px;
+  --border-width-sm: 2px;
+
+  /* Hard-edged "pixel" shadow, warm brown by default — the amber glow is
+     layered on top explicitly for primary/CTA elements so it stays scarce. */
+  --shadow-sm: 3px 3px 0 var(--color-border-strong);
+  --shadow-md: 5px 5px 0 var(--color-border-strong);
+  --shadow-lg: 7px 7px 0 var(--color-border-strong);
+
+  --glow-sm: 0 0 12px rgba(221, 154, 76, 0.25);
+  --glow-md: 0 0 24px rgba(221, 154, 76, 0.35);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  --font-body: 'VT323', 'Courier New', monospace;
+  --font-display: 'VT323', 'Courier New', monospace;
+  --font-pixel: 'Press Start 2P', 'Courier New', monospace;
+
+  --container-max: 1160px;
+  --header-height: 72px;
+}
+
+/* VT323 reads visually smaller than a normal sans font — scale the whole
+   rem-based type system up a bit so body copy stays comfortable to read. */
+html {
+  font-size: 112%;
+}

@@ -1,0 +1,141 @@
+.portfolio-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.project-card-link {
+  display: block;
+  transition: transform 0.1s ease;
+}
+
+.project-card-link:hover {
+  transform: translate(-2px, -2px);
+}
+
+.project-card {
+  overflow: hidden;
+}
+
+.project-card-media {
+  aspect-ratio: 16 / 10;
+  background: var(--color-surface-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.project-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.project-card-link:hover .project-card-media img {
+  transform: scale(1.06);
+}
+
+.project-card-placeholder {
+  font-size: 2.4rem;
+  opacity: 0.5;
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+.project-card-placeholder-note {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+}
+
+.project-card-body {
+  padding: var(--space-5);
+}
+
+.project-card-body h3 {
+  font-size: 1.05rem;
+  margin-bottom: var(--space-2);
+}
+
+.project-card-body p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.live-rooms {
+  margin-top: var(--space-8);
+  padding-top: var(--space-7);
+  border-top: var(--border-width-sm) solid var(--color-border);
+}
+
+.live-rooms-title {
+  font-size: 1.3rem;
+  margin-bottom: var(--space-2);
+}
+
+.live-rooms-subtitle {
+  max-width: 560px;
+  margin-bottom: var(--space-6);
+}
+
+.live-rooms-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.live-room-card {
+  display: block;
+  overflow: hidden;
+  transition: transform 0.1s ease, border-color 0.15s ease;
+}
+
+.live-room-card:hover {
+  transform: translate(-2px, -2px);
+  border-color: var(--color-brand-dark);
+}
+
+.live-room-media {
+  aspect-ratio: 16 / 10;
+  background: var(--color-surface-alt);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.live-room-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.live-room-placeholder {
+  font-size: 2rem;
+  opacity: 0.5;
+}
+
+.live-room-card:hover .live-room-media img {
+  transform: scale(1.06);
+}
+
+.live-room-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+}
+
+.live-room-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.live-room-rating {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
