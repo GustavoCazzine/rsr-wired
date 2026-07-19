@@ -42,7 +42,7 @@ export function WelcomeCard() {
             <div className="welcome-card-greeting">
               <img
                 className="welcome-card-avatar"
-                src={getAvatarImageUrl(player.figureString, { size: 's' })}
+                src={getAvatarImageUrl(player.figureString, { size: 'l', headOnly: true })}
                 alt={`Avatar de ${player.name}`}
               />
               <div className="welcome-card-greeting-info">
