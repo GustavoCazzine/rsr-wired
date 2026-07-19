@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+import { services } from '../../data/services';
 import './portfolio.css';
 
 export function ProjectCard({ project }) {
@@ -22,13 +24,24 @@ export function ProjectCard({ project }) {
     </article>
   );
 
-  if (!project.roomUrl) {
-    return content;
+  if (project.roomUrl) {
+    return (
+      <a href={project.roomUrl} target="_blank" rel="noreferrer" className="project-card-link">
+        {content}
+      </a>
+    );
   }
 
-  return (
-    <a href={project.roomUrl} target="_blank" rel="noreferrer" className="project-card-link">
-      {content}
-    </a>
-  );
+  // Sem link de quarto ainda? Se o projeto tiver um sistema correspondente no
+  // catálogo (mesmo "id"), leva pra página de detalhe dele.
+  const matchingService = services.find((service) => service.id === project.id);
+  if (matchingService) {
+    return (
+      <Link to={`/catalogo/${matchingService.id}`} className="project-card-link">
+        {content}
+      </Link>
+    );
+  }
+
+  return content;
 }

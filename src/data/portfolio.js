@@ -1,25 +1,41 @@
 // Portfólio de trabalhos entregues. Adicione um item para cada sistema/quarto que você já fez.
 // "image" pode ser uma URL de print do quarto (ex: hospedada no imgur) ou deixe vazio para usar o ícone padrão.
+// Usar o mesmo "id" de um item em src/data/services.js faz o card linkar direto
+// pra página de detalhe daquele sistema no catálogo (enquanto não tiver "roomUrl").
 export const portfolio = [
   {
-    id: 'projeto-1',
-    title: 'Sistema de Ranking — Quarto Evento',
-    description: 'Placar dinâmico com atualização em tempo real para competição semanal.',
+    id: 'banco-pix-automatico',
+    title: 'Banco Automático com PIX',
+    description: 'Moedas coletáveis, depósito, saque e transferência PIX com taxa entre jogadores.',
     image: '',
-    roomUrl: '',
+    roomUrl: '', // TODO: nome/link exato do quarto-vitrine
   },
   {
-    id: 'projeto-2',
-    title: 'Troca de Roupa — Quarto Fashion',
-    description: 'Guarda-roupa interativo com mais de 20 combinações de roupas configuradas.',
+    id: 'progressao-titulos',
+    title: 'Progressão com Títulos',
+    description: 'XP por presença, 15 níveis e títulos exclusivos de Mendigo a Dono do Jogo.',
     image: '',
-    roomUrl: '',
+    roomUrl: '', // TODO: nome/link exato do quarto-vitrine
   },
   {
-    id: 'projeto-3',
-    title: 'Arena PvP — Quarto de Batalhas',
-    description: 'Sistema de batalha 1x1 com vidas, dano e efeitos visuais de vitória/derrota.',
+    id: 'loja-automatica-estoque',
+    title: 'Loja Automática com Estoque',
+    description: 'Vitrine com preço e estoque em tempo real — compra em dois cliques.',
     image: '',
-    roomUrl: '',
+    roomUrl: '', // TODO: nome/link exato do quarto-vitrine
+  },
+  {
+    id: 'efeitos-interativos',
+    title: 'Módulo de Efeitos Interativos',
+    description: 'Casar, tacar fogo, jogar tomate e mais — comandos pagos em moedas entre jogadores.',
+    image: '',
+    roomUrl: '', // TODO: nome/link exato do quarto-vitrine
+  },
+  {
+    id: 'danca-das-cadeiras',
+    title: 'Dança das Cadeiras com ATÇ',
+    description: 'Evento clássico automatizado, com detecção de queimada de largada e eliminação.',
+    image: '',
+    roomUrl: '', // TODO: nome/link exato do quarto-vitrine
   },
 ];

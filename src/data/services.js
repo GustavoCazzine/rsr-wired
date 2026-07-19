@@ -2,148 +2,107 @@
 // card no catálogo e ganha sua própria página de detalhe em /catalogo/{id}.
 export const categories = [
   { id: 'todos', label: 'Todos' },
-  { id: 'troca', label: 'Troca de Roupa' },
-  { id: 'ranking', label: 'Ranking & Placar' },
-  { id: 'sorteio', label: 'Sorteio' },
-  { id: 'batalha', label: 'Batalha & PvP' },
-  { id: 'loja', label: 'Loja' },
-  { id: 'rpg', label: 'RPG' },
   { id: 'economia', label: 'Banco & PIX' },
+  { id: 'rpg', label: 'RPG' },
+  { id: 'loja', label: 'Loja' },
+  { id: 'interacao', label: 'Interação' },
+  { id: 'evento', label: 'Evento & Minigame' },
   { id: 'personalizado', label: 'Sob Medida' },
 ];
 
 export const services = [
   {
-    id: 'troca-roupa-basico',
-    title: 'Sistema de Troca de Roupa',
-    category: 'troca',
-    description:
-      'Permite que visitantes troquem peças de roupa do avatar ao interagir com itens no quarto, com opções configuráveis.',
-    longDescription:
-      'Um guarda-roupa interativo dentro do próprio quarto: o visitante clica em um item (cabide, baú, espelho) e o wired troca peças específicas do avatar dele na hora, sem precisar sair do quarto ou mexer no catálogo oficial.',
-    scenario:
-      'Ideal para quartos de moda, lojas de roupa ou eventos temáticos onde os visitantes precisam vestir uma fantasia ou uniforme específico pra participar.',
-    howItWorks: [
-      'Você define as combinações de roupa disponíveis (masculina, feminina, temática, etc.).',
-      'Cada mobi de troca fica ligado a uma combinação específica via wired.',
-      'O visitante interage com o mobi e o avatar dele muda instantaneamente.',
-      'As roupas originais podem ser restauradas ao sair do quarto, se você preferir.',
-    ],
-    tags: ['Wired', 'Avatar', 'Interativo'],
-    price: 'A combinar',
-  },
-  {
-    id: 'ranking-pontos',
-    title: 'Ranking de Pontos',
-    category: 'ranking',
-    description:
-      'Placar ao vivo que soma pontos dos jogadores conforme completam desafios, com exibição em painel no quarto.',
-    longDescription:
-      'Um placar que atualiza em tempo real, somando pontos de cada jogador conforme eles completam desafios, vencem rodadas ou cumprem metas definidas por você no quarto.',
-    scenario:
-      'Perfeito pra competições semanais, eventos de comunidade ou quartos de jogos onde o placar precisa ficar visível pra todo mundo o tempo todo.',
-    howItWorks: [
-      'Você define as regras de pontuação (o que soma, o que zera).',
-      'O placar fica exposto em um painel de texto no quarto, atualizado ao vivo.',
-      'Dá pra resetar o ranking automaticamente por período (diário, semanal).',
-      'Suporta empates e desempate por critério configurável.',
-    ],
-    tags: ['Placar', 'Competição'],
-    price: 'A combinar',
-  },
-  {
-    id: 'sorteio-automatico',
-    title: 'Sorteio Automático',
-    category: 'sorteio',
-    description:
-      'Sorteia visitantes presentes no quarto de forma automática ou manual, com efeitos visuais de destaque no vencedor.',
-    longDescription:
-      'Sorteia um ou mais visitantes presentes no quarto — automaticamente em intervalos ou manualmente com um comando seu — e destaca o vencedor com efeitos visuais.',
-    scenario:
-      'Usado em eventos de sorteio, quartos de doações e ações de engajamento onde você quer recompensar quem está presente sem favoritismo.',
-    howItWorks: [
-      'O sistema identifica os visitantes elegíveis no quarto (ex: dentro de uma área específica).',
-      'No horário definido ou por comando manual, sorteia aleatoriamente entre eles.',
-      'O vencedor recebe destaque visual (luz, efeito, texto) e pode ser anunciado no chat.',
-      'Dá pra excluir quem já ganhou recentemente, evitando repetição.',
-    ],
-    tags: ['Sorteio', 'Evento'],
-    price: 'A combinar',
-  },
-  {
-    id: 'arena-batalha',
-    title: 'Arena de Batalha',
-    category: 'batalha',
-    description:
-      'Sistema de PvP por turnos ou tempo real dentro do quarto, com vidas, dano e condição de vitória configuráveis.',
-    longDescription:
-      'Uma arena de combate 1x1 ou em equipe, com sistema de vidas, dano configurável e condição de vitória clara — por turnos ou em tempo real, dependendo do estilo do seu quarto.',
-    scenario:
-      'Quartos de RPG, arenas de duelo e eventos de torneio que precisam de uma mecânica de combate justa e visualmente clara pra plateia acompanhar.',
-    howItWorks: [
-      'Cada jogador entra na arena com uma quantidade de vidas/HP definida.',
-      'Ataques e habilidades reduzem o HP do oponente através de mobis interativos.',
-      'O sistema detecta quando um jogador chega a zero e declara o vencedor.',
-      'Suporta modos extras: times, curas, itens especiais.',
-    ],
-    tags: ['PvP', 'Minigame'],
-    price: 'A combinar',
-  },
-  {
-    id: 'loja-itens',
-    title: 'Loja de Itens',
-    category: 'loja',
-    description:
-      'Loja dentro do quarto onde visitantes trocam moedas/pontos por itens, mobis ou emblemas configurados por você.',
-    longDescription:
-      'Uma loja interativa dentro do quarto: o visitante acumula moedas ou pontos e troca por itens, mobis, emblemas ou benefícios que você definir na vitrine.',
-    scenario:
-      'Ótimo pra quartos de RPG, comunidades com economia própria ou eventos onde os pontos ganhos ao longo do dia viram recompensa no final.',
-    howItWorks: [
-      'Você define o catálogo de itens e o preço de cada um em moedas/pontos.',
-      'O visitante acumula saldo jogando, participando ou por ação sua.',
-      'Ao interagir com a loja, o sistema desconta o saldo e libera o item.',
-      'Dá pra limitar estoque ou deixar itens exclusivos por tempo limitado.',
-    ],
-    tags: ['Economia', 'Moedas'],
-    price: 'A combinar',
-  },
-  {
-    id: 'rpg-sistema',
-    title: 'Sistema de RPG',
-    category: 'rpg',
-    description:
-      'Estrutura de RPG completa para o quarto: atributos, missões, progressão de nível e eventos narrativos controlados por wired.',
-    longDescription:
-      'Monto a espinha dorsal de um RPG de quarto: atributos do personagem (vida, força, energia), progressão por nível, missões com recompensa e gatilhos narrativos que reagem às escolhas dos jogadores.',
-    scenario:
-      'Comunidades de RPG (morros, cidades, universos próprios) que já têm a história e a ambientação prontas, mas precisam de mecânica funcionando por trás da narrativa.',
-    howItWorks: [
-      'Mapeamos junto quais atributos e mecânicas fazem sentido pra sua história.',
-      'Cada mecânica vira um conjunto de wireds testados e documentados.',
-      'Missões e eventos ficam configuráveis por você, sem precisar mexer no wired em si.',
-      'Progresso do jogador pode ser salvo por variável e consultado a qualquer momento.',
-    ],
-    tags: ['RPG', 'Narrativa', 'Progressão'],
-    price: 'A combinar',
-  },
-  {
-    id: 'banco-pix',
-    title: 'Banco & PIX Virtual',
+    id: 'banco-pix-automatico',
+    title: 'Banco Automático com PIX',
     category: 'economia',
     description:
-      'Sistema bancário para o quarto: saldo por jogador, transferência estilo PIX entre visitantes e extrato de movimentação.',
+      'Sistema bancário completo: moedas coletáveis, depósito, saque e transferência PIX entre jogadores.',
     longDescription:
-      'Um "banco" dentro do quarto: cada jogador tem saldo próprio, pode transferir moedas pra outro visitante na hora (estilo PIX) e consultar extrato — tudo via wired, sem depender de terceiros.',
+      'Moedas spawnam em posições aleatórias do quarto e os jogadores disputam a coleta. No caixa eletrônico, o jogador é identificado automaticamente e pode depositar, sacar e consultar saldo com comandos simples. O PIX permite transferir moedas para qualquer jogador do quarto com taxa de 5%, criando economia real entre visitantes.',
     scenario:
-      'Quartos de RPG com economia interna, cidades virtuais e comunidades que simulam comércio entre jogadores e precisam de um jeito confiável de mover moedas.',
+      'Quartos de convivência, baladas, RPGs e qualquer quarto que queira retenção — o jogador fica para acumular.',
     howItWorks: [
-      'Cada jogador tem uma "conta" identificada pelo nick, com saldo próprio.',
-      'Transferências acontecem em tempo real ao interagir com o mobi de PIX.',
-      'O sistema evita saldo negativo e registra a movimentação.',
-      'Dá pra integrar com a loja de itens e outros sistemas de economia do quarto.',
+      'Colete moedas que caem pelo quarto.',
+      'Pise no caixa eletrônico e seja identificado automaticamente.',
+      'Digite :depositar ou :sacar com a quantidade desejada.',
+      'Use o PIX clicando no jogador de destino (taxa de 5%).',
+      'Acompanhe tudo no card do jogador.',
     ],
-    tags: ['Economia', 'PIX', 'Banco'],
+    tags: ['Economia', 'Banco', 'PIX'],
+    price: 'A combinar',
+  },
+  {
+    id: 'progressao-titulos',
+    title: 'Progressão com Títulos',
+    category: 'rpg',
+    description:
+      'Jogador ganha XP por presença, sobe 15 níveis e desbloqueia títulos de Mendigo a Dono do Jogo.',
+    longDescription:
+      'Sistema de progressão automática: a presença no quarto gera XP, com curva de 35% por nível para equilibrar esforço e recompensa. Cada nível libera um título exclusivo exibido no card do jogador, e o level-up dá bônus em moedas anunciado para todo o quarto. Integra com o banco: progressão e economia no mesmo loop.',
+    scenario: 'Qualquer quarto que queira fidelizar visitantes — balada, RP, comunidade.',
+    howItWorks: [
+      'Entre e permaneça no quarto.',
+      'Acumule XP por minuto de presença.',
+      'Ao bater a meta, level-up automático com anúncio global.',
+      'Receba bônus em moedas a cada level-up.',
+      'Dê dois cliques em alguém pra ver nível e título.',
+    ],
+    tags: ['XP', 'Níveis', 'Títulos'],
+    price: 'A combinar',
+  },
+  {
+    id: 'loja-automatica-estoque',
+    title: 'Loja Automática com Estoque',
+    category: 'loja',
+    description: 'Vitrine de mobis com preço e estoque: 1 clique mostra o item, 2 cliques compra na hora.',
+    longDescription:
+      'Cada mobi da vitrine responde ao clique exibindo nome, preço e quantidade disponível. Dois cliques abrem a compra automática, debitando moedas do jogador e controlando estoque em tempo real — com mensagem de esgotado quando acaba. Baús ao lado aceitam doações de mobi e câmbio, alimentando sorteios do quarto.',
+    scenario: 'Quartos de troca, eventos com premiação, lojas de raros.',
+    howItWorks: [
+      'Clique no mobi e veja preço e estoque disponível.',
+      'Dê dois cliques para comprar.',
+      'As moedas são debitadas automaticamente.',
+      'O estoque atualiza sozinho, com aviso de esgotado.',
+      'Doe pelo baú ao lado se quiser patrocinar a loja.',
+    ],
+    tags: ['Loja', 'Estoque', 'Doação'],
+    price: 'A combinar',
+  },
+  {
+    id: 'efeitos-interativos',
+    title: 'Módulo de Efeitos Interativos',
+    category: 'interacao',
+    description: 'Comandos pagos em moedas: casar, fogo, tomate, balão, decapitar e mais — tudo entre jogadores.',
+    longDescription:
+      'Pacote de efeitos por comando onde o jogador paga em moedas e escolhe o alvo com um clique: casamento com anúncio, atear fogo, jogar tomate, balão que ergue o alvo, decapitação e outros. Cada efeito tem preço próprio, mensagem global personalizada e validações de saldo. Conecta a economia do quarto à interação social.',
+    scenario: 'Baladas, becos, quartos de convivência — onde a graça é interagir.',
+    howItWorks: [
+      'Digite !efeitos e veja a tabela de preços.',
+      'Digite o comando do efeito desejado.',
+      'Clique no jogador alvo.',
+      'As moedas são debitadas automaticamente.',
+      'Uma mensagem global mostra a ação pra todo o quarto.',
+    ],
+    tags: ['Efeitos', 'Interação', 'Comandos'],
+    price: 'A combinar',
+  },
+  {
+    id: 'danca-das-cadeiras',
+    title: 'Dança das Cadeiras com ATÇ',
+    category: 'evento',
+    description:
+      'Evento clássico automatizado: sorteio de cadeiras, detecção de queimada de largada e eliminação valendo moedas.',
+    longDescription:
+      'O controlador define a quantidade de jogadores e o sistema sorteia a composição de assentos (1, 2 ou 3 lugares), sempre deixando um jogador de fora. O "ATÇÇÇ" é automatizado: mensagem global e trava de movimento — quem andar ou sentar antes do mobi cair queima a largada e é eliminado na hora. Inclui fases finais de trio e duo, com opção de pagar moedas pra voltar.',
+    scenario: 'Eventos com plateia, quartos de jogos, premiações.',
+    howItWorks: [
+      'Entre na área de espera.',
+      'O controlador inicia a partida.',
+      'Aguarde o ATÇ sem se mexer.',
+      'A cadeira cai — corra e sente antes dos outros.',
+      'Sobreviva até a fase final de duo.',
+    ],
+    tags: ['Evento', 'Minigame', 'Eliminação'],
     price: 'A combinar',
   },
   {
