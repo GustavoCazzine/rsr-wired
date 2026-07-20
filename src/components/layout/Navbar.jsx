@@ -23,7 +23,7 @@ export function Navbar() {
           <span className="navbar-brand-badge" aria-hidden="true">
             <img src="/favicon-head.png" alt="" />
           </span>
-          {site.name}
+          <span className="navbar-brand-text">{site.name}</span>
         </NavLink>
 
         <div className="navbar-right">
